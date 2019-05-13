@@ -7,8 +7,9 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, BackHandler,StyleSheet, Text, View,ToastAndroid,TouchableOpacity,Image} from 'react-native';
 import Header from './src/component/Header';
+
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -23,7 +24,14 @@ export default class App extends Component<Props> {
     return (
       <View style={styles.container}>
 
-        <Header leftText={'返回'} > </Header>
+        <Header
+         title = {'我的标题'} 
+         leftSrc = {
+           { source: require('./res/img/icon_cash_return.png'), 
+             listener:()=>{ToastAndroid.show('back',3000)}
+            }
+          }
+         />
 
         <View style={styles.container}>
           <Text style={styles.welcome}>Welcome to React Native!</Text>
@@ -37,7 +45,6 @@ export default class App extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
