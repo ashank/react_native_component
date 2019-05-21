@@ -20,12 +20,12 @@ var width = Dimensions.get('window').width;
  * 
  *   backgroundColor:背景色
  * 
- *  leftStyle:PropTypes.shape({iconSize:PropTypes.number,fontSize: PropTypes.number,textColor:PropTypes.string}),左边样式
- *   rightStyle:PropTypes.shape({iconSize:PropTypes.number,fontSize: PropTypes.number,textColor:PropTypes.string}), 右边样式
- *   titleStyle:PropTypes.shape({fontSize: PropTypes.number,textColor:PropTypes.string}) 标题样式
+ *   leftStyle:{iconSize:13,fontSize: 16,textColor:'#FFFFFF'},左边样式
+ *   rightStyle:{iconSize:20,fontSize: 18,textColor:'#FFFFFF'}, 右边样式
+ *   titleStyle:{fontSize: 20,textColor:'#FFFFFF'}) 标题样式
 
- *   leftSrc:PropTypes.shape({text:PropTypes.string, source: PropTypes.fuc, listener:PropTypes.func}), 左边按钮资源
- *   rightSrc: PropTypes.shape({text:PropTypes.string, source: PropTypes.fuc, listener:PropTypes.func}), 右边按钮资源
+ *   leftSrc:{text:文本, source: 图片资源 必须使用 require('path'), listener:监听}, 左边按钮资源
+ *   rightSrc: {text:文本, source: 图片资源 必须使用 require('path'), listener:监听}, 右边按钮资源
  * 
  *   title:标题
  * 
@@ -36,6 +36,7 @@ var width = Dimensions.get('window').width;
  *  activeOpacity:透明度
  * 
  *   使用方式demo：
+ * 
  *   <Header
  *       title = {'我的标题'} 
  *       leftSrc = {
