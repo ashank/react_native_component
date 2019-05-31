@@ -1,3 +1,5 @@
+'use strict';
+
 import React, { Component } from 'react';
 import {Platform,Text,Image, ToastAndroid,TouchableOpacity,View,StatusBar} from 'react-native';
 import DeviceInfo from 'react-native-device-info';

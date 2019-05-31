@@ -56,3 +56,7 @@ buck-out/
 *.jsbundle
 /node_modules/
 /__tests__/
+/android/app/build/
+/android/.gradle/
+/android/gradle/
+/.vscode/

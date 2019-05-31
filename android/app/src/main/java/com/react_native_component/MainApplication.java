@@ -3,6 +3,9 @@ package com.react_native_component;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+import com.github.wumke.RNExitApp.RNExitAppPackage;
+import com.masteratul.exceptionhandler.ReactNativeExceptionHandlerPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -22,10 +25,10 @@ public class MainApplication extends Application implements ReactApplication {
 
     @Override
     protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(
-          new MainReactPackage(),
-            new RNDeviceInfo()
-      );
+      return Arrays.<ReactPackage>asList(new MainReactPackage(),
+            new RNGestureHandlerPackage(),
+            new RNExitAppPackage(), new ReactNativeExceptionHandlerPackage(),
+          new RNDeviceInfo());
     }
 
     @Override
